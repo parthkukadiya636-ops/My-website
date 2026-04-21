@@ -1,0 +1,152 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+
+  <style>
+   body {
+  margin: 0;
+  height: 100vh;
+  background: url("login.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+    .box {
+      background: lightblue;
+      padding: 30px;
+      border-radius: 12px;
+      width: 320px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      background:white;
+      color: black;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #38bdf8;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .login-btn {
+      background: darkcyan;
+      color: white;
+      border: 1px solid #475569;;
+    }
+
+    .login-btn:hover {
+      background:black;
+    }
+
+    .signup-btn {
+      background: darkcyan;
+      border: 1px solid #475569;
+      color: white;
+    }
+
+    .signup-btn:hover {
+      background: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h2>Login</h2>
+
+    <input id="email" type="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+
+    <button type="button" class="login-btn" onclick="loginUser()">Sign in</button>
+    <button type="button" class="signup-btn" onclick="signUpUser()">Create Account</button>
+  </div>
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script>
+    // 🔐 LOGIN
+    window.loginUser = async function () {
+      const supabase = window.supabase.createClient(
+        "https://txhqligevzccmjoynbbd.supabase.co",
+        "sb_publishable_9RcxNIAXOFXh2o81TYeePQ_BOgt79l-"
+      );
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (!email || !password) {
+        alert("Enter email and password");
+        return;
+      }
+
+      const { error } = await supabase.auth.signInWithPassword({
+        email,
+        password
+      });
+
+      if (error) {
+        alert(error.message);
+      } else {
+        alert("Login successful 🎉");
+
+        setTimeout(() => {
+          window.location.href = "./index.html";
+        }, 1000);
+      }
+    };
+
+    // 🆕 SIGNUP
+    window.signUpUser = async function () {
+      const supabase = window.supabase.createClient(
+        "https://txhqligevzccmjoynbbd.supabase.co",
+        "sb_publishable_9RcxNIAXOFXh2o81TYeePQ_BOgt79l-"
+      );
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (!email || !password) {
+        alert("Enter email and password");
+        return;
+      }
+
+      const { error } = await supabase.auth.signUp({
+        email,
+        password
+      });
+
+      if (error) {
+        alert(error.message);
+      } else {
+        alert("Account created! Now login.");
+      }
+    };
+  </script>
+
+</body>
+</html>

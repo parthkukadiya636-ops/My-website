@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FDF5E6; 
+            color: #333;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+      
+        .destinations-grid {
+            display: flex;
+            justify-content: center; 
+            gap: 25px;
+            flex-wrap: wrap; 
+        }
+
+       
+        .tour-card {
+            background: white;
+            width: 260px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: left;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .city-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .package-details {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .price-label {
+            font-size: 0.8rem;
+            color: #444;
+        }
+
+        .price-amount {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #000;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+       
+        .btn-explore {
+            display: block;
+            background-color: #3B82F6;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .btn-explore:hover {
+            background-color: #1D4ED8;
+        }
+
+   
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #333;
+            color: #aaa;
+            font-size: 0.8rem;
+        }
+        body {
+            background-image: url('background.jpg');
+            background-image: linear-gradient(rgba(253, 245, 230, 0.9), rgba(253, 245, 230, 0.9)), url('background.jpg');
+    
+           
+            background-repeat: no-repeat;
+    
+            
+            background-size: cover;
+    
+         
+            background-attachment: fixed;
+    
+            
+            background-position: center;
+    
+            margin: 0;
+            padding: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class = "nav">
+
+       <div id ="name"> 
+        <img src = "logo Travelmate.jpg" height="55 ">
+         
+        <a href="#" class="logo">
+          TravelMate</a>
+       
+     
+      </div>
+     
+     
+      <a href="index.html">Home</a>
+       
+      <a href="tours.html">Tours</a>
+      <a href="About.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="form.html" class="book-btn">Book Now</a>
+       <div class="search-box">
+        <input type="text" placeholder="Enter locations">
+        <button>Search</button>
+    </div>
+    
+    </div>
+
+     <h1>Tours Page</h1>
+     <div class="content-wrap">
+     <div class="main-container">
+        <h1 class="page-title">Explore our packages</h1>
+        <p class="page-subtitle">Pick your dream destination from our most popular tours:</p>
+
+        <div class="destinations-grid">
+
+            <div class="tour-card">
+                <img src="paris.jpg" alt="Paris" class="card-img">
+                <div class="card-body">
+                    <span class="city-name">Paris</span>
+                    <p class="package-details">5 Days / 4 Nights<br>Eiffel Tower & Louvre</p>
+                    <span class="price-label">Packages starting @</span>
+                    <span class="price-amount">₹1,55,000</span>
+                    <a href="form.html?city=Paris" class="btn-explore">Book Now</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="dubai.jpg" alt="Dubai" class="card-img">
+                <div class="card-body">
+                    <span class="city-name">Dubai</span>
+                    <p class="package-details">4 Days / 3 Nights<br>Luxury City & Desert</p>
+                    <span class="price-label">Packages starting @</span>
+                    <span class="price-amount">₹95,000</span>
+                    <a href="form.html?city=Dubai" class="btn-explore">Book Now</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="maldives.jpg" alt="Maldives" class="card-img">
+                <div class="card-body">
+                    <span class="city-name">Maldives</span>
+                    <p class="package-details">6 Days / 5 Nights<br>Island Resorts & Spa</p>
+                    <span class="price-label">Packages starting @</span>
+                    <span class="price-amount">₹1,85,000</span>
+                    <a href="form.html?city=Maldives" class="btn-explore">Book Now</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="switzerland.jpg" alt="Switzerland" class="card-img">
+                <div class="card-body">
+                    <span class="city-name">Switzerland</span>
+                    <p class="package-details">7 Days / 6 Nights<br>Swiss Alps & Trains</p>
+                    <span class="price-label">Packages starting @</span>
+                    <span class="price-amount">₹2,10,000</span>
+                    <a href="form.html?city=Switzerland" class="btn-explore">Book Now</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="bali.jpg" alt="Bali" class="card-img">
+                <div class="card-body">
+                    <span class="city-name">Bali</span>
+                    <p class="package-details">5 Days / 4 Nights<br>Beaches & Temples</p>
+                    <span class="price-label">Packages starting @</span>
+                    <span class="price-amount">₹1,25,000</span>
+                    <a href="form.html?city=Bali" class="btn-explore">Book Now</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="singapore.jpg" alt="Singapore" class="card-img">
+                <div class="card-body">
+                    <span class="city-name">Singapore</span>
+                    <p class="package-details">4 Days / 3 Nights<br>Modern City Views</p>
+                    <span class="price-label">Packages starting @</span>
+                    <span class="price-amount">₹1,35,000</span>
+                    <a href="form.html?city=Singapore" class="btn-explore">Book Now</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="goa.jpg" alt="Goa" class="card-img">
+                <div class="card-body">
+                    <span class="city-name">Goa</span>
+                    <p class="package-details">4 Days / 3 Nights<br>Beach Shacks & Parties</p>
+                    <span class="price-label">Packages starting @</span>
+                    <span class="price-amount">₹65,000</span>
+                    <a href="form.html?city=Goa" class="btn-explore">Book Now</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="thailand.jpg" alt="Thailand" class="card-img">
+                <div class="card-body">
+                    <span class="city-name">Thailand</span>
+                    <p class="package-details">6 Days / 5 Nights<br>Islands & Culture</p>
+                    <span class="price-label">Packages starting @</span>
+                    <span class="price-amount">₹99,000</span>
+                    <a href="form.html?city=Thailand" class="btn-explore">Book Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Travel Mate — Made with 🧡 for explorers everywhere.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+    <div class = "nav">
+
+       <div id ="name"> 
+        <img src = "logo Travelmate.jpg" height="55 ">
+         
+        <a href="#" class="logo">
+          TravelMate</a>
+       
+     
+      </div>
+     
+     
+      <a href="index.html">Home</a>
+       
+      <a href="tours.html">Tours</a>
+      <a href="About.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="form.html" class="book-btn">Book Now</a>
+       <div class="search-box">
+        <input type="text" placeholder="Enter locations">
+        <button>Search</button>
+    </div>
+    
+    </div>
+    <section class="hero">
+      <video autoplay loop muted id="bg-video">
+      <source src="15375296_3840_2160_60fps.mp4" type="video/mp4">
+      </video>
+
+ 
+
+      <span class="hero-label">
+        Explore The World
+      </span>
+      <pre> Discover The Beauty<br> Of The World !!</pre>
+
+      <button class = "hero-text" >
+        <span class="square"></span>
+        <a href = "#"> Explore Now</a>
+        </button>
+
+        <button class = "hero-text" >
+        <span class="square"></span>
+        <a href = "#"> Watch Video</a>
+        </button>
+
+        <div class = "label">
+          <div class = "label1"> 
+           <span><h1>500+</h1></span>
+           <span>DESTINATIONS</span>
+          </div>
+          <div class = "label1">
+             <span> <h1>2k+</h1>  </span>
+            <span>HAPPY CLIENTS</span> 
+
+          </div>
+          <div class = "label1">
+            <span><h1>10+</h1></span>  
+             
+             <span>YEARS EXPERIENCE</span> 
+
+          </div>
+        </div>
+
+       </section>
+
+       <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<script>
+  const supabase = window.supabase.createClient(
+    "https://txhqligevzccmjoynbbd.supabase.co",
+    "sb_publishable_9RcxNIAXOFXh2o81TYeePQ_BOgt79l-"
+  );
+
+  async function checkUser() {
+    const { data: { user } } = await supabase.auth.getUser();
+
+    if (!user) {
+      window.location.href = "login.html";
+    }
+  }
+
+  checkUser();
+</script>
+
+    </body>
+    </html>
