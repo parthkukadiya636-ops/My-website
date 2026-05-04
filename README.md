@@ -2,8 +2,7 @@
 
 TravelMate is a responsive travel website created to help users explore destinations and navigate through essential pages with ease, including Home, About, Contact, and Form sections.
 
----
-
+ 
 ## 🚀 Features
 
 - 🏠 **Home Page** – Provides an overview of the website along with smooth navigation  
@@ -12,7 +11,7 @@ TravelMate is a responsive travel website created to help users explore destinat
 - 📝 **Form Page** – Allows users to submit queries or booking requests  
 - 📱 Designed to be fully responsive across devices  
 
----
+
 
 ## 🛠️ Technologies Used
 
@@ -20,8 +19,7 @@ TravelMate is a responsive travel website created to help users explore destinat
 - CSS3  
 - JavaScript  
 
----
-
+ 
 ## 📂 Project Structure
 
 - `index.html` – Main landing page  
@@ -31,27 +29,25 @@ TravelMate is a responsive travel website created to help users explore destinat
 - `style.css` – Stylesheet for design and responsiveness  
 - `script.js` – JavaScript functionality  
 
----
-
+ 
 ## ▶️ How to Run
 
 1. Clone or download the repository  
 2. Open the `index.html` file in any web browser  
 3. Use the navigation menu to explore different sections  
 
----
+ 
 
 ## 🎯 Purpose of the Project
 
 This project was developed as a hands-on exercise to practice front-end development and build a structured, multi-page responsive website using core technologies.
 
----
-
+ 
 ## 🤝 Contributing
 
 Suggestions and improvements are welcome. Feel free to open an issue or submit a pull request if you'd like to contribute.
 
----
+ 
 
 ## ⭐ Support
 
